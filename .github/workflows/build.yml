@@ -1,0 +1,42 @@
+name: Build EvoOS ISO
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # On utilise l'image officielle Arch Linux car mkarchiso doit tourner sur Arch
+    container:
+      image: archlinux:latest
+      options: --privileged
+
+    steps:
+      - name: Checkout du dépôt
+        uses: actions/checkout@v4
+
+      - name: Préparer Arch Linux + archiso
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm --needed archiso git
+
+      - name: Compiler l'ISO
+        run: |
+          mkdir -p out
+          mkarchiso -v -o out/ .
+
+      - name: Récupérer le nom de l'ISO générée
+        id: iso
+        run: |
+          ISO_PATH=$(find out -name "*.iso" | head -n1)
+          echo "path=$ISO_PATH" >> "$GITHUB_OUTPUT"
+          echo "name=$(basename "$ISO_PATH")" >> "$GITHUB_OUTPUT"
+
+      - name: Upload de l'ISO comme artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.iso.outputs.name }}
+          path: ${{ steps.iso.outputs.path }}
+          retention-days: 14
