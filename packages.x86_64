@@ -1,0 +1,88 @@
+# === Base système ===
+base
+base-devel
+linux
+linux-firmware
+syslinux
+mkinitcpio
+mkinitcpio-archiso
+mkinitcpio-nfs-utils
+nano
+vim
+sudo
+grub
+efibootmgr
+os-prober
+dosfstools
+e2fsprogs
+ntfs-3g
+
+# === Réseau / WiFi ===
+networkmanager
+network-manager-applet
+wireless_tools
+wpa_supplicant
+iwd
+dhcpcd
+openssh
+
+# === Interface graphique (Xfce) ===
+xorg-server
+xorg-xinit
+xorg-xrandr
+xfce4
+xfce4-goodies
+lightdm
+lightdm-gtk-greeter
+pulseaudio
+pulseaudio-alsa
+pavucontrol
+
+# === Explorateur de fichiers / apps de base ===
+thunar
+thunar-archive-plugin
+thunar-volman
+file-roller
+gvfs
+gvfs-mtp
+ristretto
+mousepad
+xarchiver
+firefox
+
+# === Compatibilité Windows (x86_64) ===
+wine
+wine-mono
+wine-gecko
+winetricks
+lib32-mesa
+vulkan-icd-loader
+lib32-vulkan-icd-loader
+
+# === Installeur graphique (premier démarrage) ===
+calamares
+calamares-tools
+python-pyqt5
+python-pyparted
+python-pychromecast
+qt5-svg
+qt5-quickcontrols2
+qt5-graphicaleffects
+kpmcore
+squashfs-tools
+rsync
+
+# === Localisation / claviers ===
+glibc-locales
+kbd
+
+# === Outils système ===
+htop
+neofetch
+git
+p7zip
+unzip
+unrar
+gparted
+usbutils
+pciutils

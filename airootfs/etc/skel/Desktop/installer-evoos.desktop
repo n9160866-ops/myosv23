@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Installer EvoOS
+Comment=Installer EvoOS sur le disque dur
+Icon=calamares
+Exec=sudo calamares
+Terminal=false
+Categories=System;
+X-GNOME-Autostart-enabled=true

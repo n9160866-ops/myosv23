@@ -1,0 +1,31 @@
+---
+componentName: evoos
+
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+
+strings:
+    productName:         "EvoOS"
+    shortProductName:    "EvoOS"
+    version:             "1.0"
+    shortVersion:        "1.0"
+    versionedName:       "EvoOS 1.0"
+    shortVersionedName:  "EvoOS 1.0"
+    bootloaderEntryName: "EvoOS"
+    productUrl:          "https://example.com"
+    supportUrl:          "https://example.com"
+    knownIssuesUrl:      "https://example.com"
+    releaseNotesUrl:     "https://example.com"
+
+images:
+    productLogo:         "evoos.png"
+    productIcon:         "evoos.png"
+    productWelcome:      "evoos-welcome.png"
+
+slideshow: "show.qml"
+
+style:
+   sidebarBackground:    "#1a1f2b"
+   sidebarText:          "#ffffff"
+   sidebarTextSelect:    "#3a6fd8"
+   sidebarTextCurrent:   "#3a6fd8"

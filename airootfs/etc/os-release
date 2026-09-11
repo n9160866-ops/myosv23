@@ -1,0 +1,11 @@
+NAME="EvoOS"
+PRETTY_NAME="EvoOS"
+ID=evoos
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://example.com"
+DOCUMENTATION_URL="https://example.com"
+SUPPORT_URL="https://example.com"
+BUG_REPORT_URL="https://example.com"
+LOGO=evoos-logo
